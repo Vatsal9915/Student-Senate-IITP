@@ -1,0 +1,137 @@
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Calendar, ArrowRight, Bell } from "lucide-react"
+import Link from "next/link"
+
+const notices = [
+  {
+    id: 1,
+    title: "Student Senate Elections 2025 - Nomination Process",
+    date: "2025-03-10",
+    excerpt: "Nominations for Student Senate positions are now open. Submit your applications by March 15th.",
+    category: "Elections",
+    urgent: true,
+  },
+  {
+    id: 2,
+    title: "HACK N TECH Hackathon Results Announced",
+    date: "2025-03-08",
+    excerpt: "Congratulations to all participants! Winners have been announced for the 24-hour coding marathon.",
+    category: "Events",
+    urgent: false,
+  },
+  {
+    id: 3,
+    title: "New Internship Opportunities - Spring 2025",
+    date: "2025-03-05",
+    excerpt: "15+ companies are offering internship positions. Registration deadline: March 20th.",
+    category: "Opportunities",
+    urgent: false,
+  },
+  {
+    id: 4,
+    title: "TATVA Workshop Series - AI & Machine Learning",
+    date: "2025-03-03",
+    excerpt: "Join our comprehensive workshop series on AI/ML fundamentals and advanced applications.",
+    category: "Workshops",
+    urgent: false,
+  },
+  {
+    id: 5,
+    title: "DISHA Career Counseling Sessions",
+    date: "2025-03-01",
+    excerpt: "One-on-one career guidance sessions with industry experts. Book your slot now.",
+    category: "Career",
+    urgent: false,
+  },
+]
+
+export function NoticesSection() {
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
+  }
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      Elections: "bg-red-100 text-red-800",
+      Events: "bg-blue-100 text-blue-800",
+      Opportunities: "bg-green-100 text-green-800",
+      Workshops: "bg-purple-100 text-purple-800",
+      Career: "bg-orange-100 text-orange-800",
+    }
+    return colors[category as keyof typeof colors] || "bg-gray-100 text-gray-800"
+  }
+
+  return (
+    <section id="notices-section" className="py-16 lg:py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Latest Notices & Updates</h2>
+          <p className="text-lg lg:text-xl text-gray-600">
+            Stay informed about important announcements and opportunities
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          {notices.slice(0, 5).map((notice) => (
+            <Card
+              key={notice.id}
+              className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                notice.urgent ? "ring-2 ring-red-200 bg-red-50/30" : ""
+              }`}
+            >
+              <CardContent className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <span
+                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getCategoryColor(notice.category)}`}
+                  >
+                    {notice.category}
+                  </span>
+                  {notice.urgent && <Bell className="w-4 h-4 text-red-500 animate-pulse" />}
+                </div>
+
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                  {notice.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{notice.excerpt}</p>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {formatDate(notice.date)}
+                  </div>
+                  <Link
+                    href={`/notices/${notice.id}`}
+                    className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Link href="/notices">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg"
+            >
+              View All Notices
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}

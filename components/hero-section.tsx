@@ -1,0 +1,223 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button"
+import { ChevronLeft, ChevronRight, ArrowRight, Users, Award, TrendingUp } from "lucide-react"
+import Link from "next/link"
+
+const slides = [
+  {
+    image: "/placeholder.svg?height=600&width=1200",
+    title: "IIT Patna Campus",
+    description: "State-of-the-art facilities fostering innovation and excellence",
+  },
+  {
+    image: "/placeholder.svg?height=600&width=1200",
+    title: "Academic Excellence",
+    description: "World-class education preparing students for global challenges",
+  },
+  {
+    image: "/placeholder.svg?height=600&width=1200",
+    title: "Industry Partnerships",
+    description: "Strong connections with leading companies worldwide",
+  },
+]
+
+export function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      {/* Animated Background Elements - Positioned to avoid text collision */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Floating geometric shapes - positioned in corners and edges only */}
+        <div
+          className="absolute top-20 left-8 w-12 h-12 bg-blue-200/15 rounded-full animate-bounce hidden lg:block"
+          style={{ animationDelay: "0s", animationDuration: "4s" }}
+        ></div>
+        <div
+          className="absolute top-32 right-12 w-8 h-8 bg-blue-300/10 rounded-lg rotate-45 animate-pulse hidden lg:block"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute bottom-32 left-12 w-6 h-6 bg-blue-400/15 rounded-full animate-ping hidden lg:block"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 right-16 w-14 h-14 bg-gradient-to-r from-blue-200/10 to-blue-300/10 rounded-full animate-bounce hidden lg:block"
+          style={{ animationDelay: "1.5s", animationDuration: "5s" }}
+        ></div>
+
+        {/* Floating Icons - positioned in far corners */}
+        <div
+          className="absolute top-16 left-20 w-8 h-8 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm animate-bounce hidden xl:flex"
+          style={{ animationDelay: "0s", animationDuration: "3s" }}
+        >
+          <Users className="w-4 h-4 text-blue-500" />
+        </div>
+        <div
+          className="absolute top-24 right-24 w-8 h-8 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm animate-bounce hidden xl:flex"
+          style={{ animationDelay: "1s", animationDuration: "3s" }}
+        >
+          <Award className="w-4 h-4 text-blue-500" />
+        </div>
+        <div
+          className="absolute bottom-40 left-24 w-8 h-8 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm animate-bounce hidden xl:flex"
+          style={{ animationDelay: "2s", animationDuration: "3s" }}
+        >
+          <TrendingUp className="w-4 h-4 text-blue-500" />
+        </div>
+
+        {/* Subtle Grid Pattern - very low opacity */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="grid grid-cols-20 gap-8 h-full">
+            {Array.from({ length: 100 }).map((_, i) => (
+              <div
+                key={i}
+                className="bg-blue-500 rounded-sm animate-pulse w-1 h-1"
+                style={{ animationDelay: `${i * 0.2}s`, animationDuration: "3s" }}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Background Video/Image Slideshow */}
+      <div className="absolute inset-0 z-10">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-all duration-1000 ${
+              index === currentSlide ? "opacity-20" : "opacity-0"
+            }`}
+          >
+            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${slide.image})` }} />
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
+      >
+        <ChevronLeft className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
+      >
+        <ChevronRight className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
+      </button>
+
+      {/* Main Content */}
+      <div
+        className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${
+          isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
+      >
+        {/* Animated Logo/Badge */}
+        <div className="mb-8 flex justify-center">
+          <div className="relative">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse">
+              <span className="text-white font-bold text-2xl">SS</span>
+            </div>
+            <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full animate-bounce"></div>
+          </div>
+        </div>
+
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-gray-800 via-blue-600 to-gray-800 bg-clip-text text-transparent">
+          Student Senate
+        </h1>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-4 text-blue-600">IIT Patna</h2>
+        <p className="text-2xl md:text-3xl lg:text-4xl mb-8 font-light text-gray-700">
+          Empowering Students Through Innovation
+        </p>
+        <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-gray-600 leading-relaxed">
+          A reimagined platform with three specialized wings - DISHA, ARTHNITI, and TATVA - fostering career
+          development, entrepreneurship, and technological innovation at IIT Patna.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <Link href="/about">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+            >
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+            >
+              Contact Us
+            </Button>
+          </Link>
+        </div>
+
+        {/* Quick Info Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {[
+            { label: "Active Wings", value: "3", icon: "🎯" },
+            { label: "Sub-Clubs", value: "24+", icon: "🏢" },
+            { label: "Launch Year", value: "2025", icon: "🚀" },
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className={`bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg transform transition-all duration-500 hover:scale-105 ${
+                isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
+              <div className="text-2xl mb-2">{stat.icon}</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
+              <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              index === currentSlide ? "bg-blue-600 scale-125" : "bg-blue-300 hover:bg-blue-400"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  )
+}
