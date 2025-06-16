@@ -155,4 +155,4 @@ For questions, suggestions, or collaborations, feel free to reach out:
 
 ⭐ If you liked this project, consider starring it on GitHub!
 
-**Made with ❤️ by Vatsal srivastava**
+**Made with ❤️ by Vatsal Srivastava**
