@@ -97,7 +97,7 @@ student-senate-iitp/
 ├── 📄 .gitignore              # Git ignore rules
 └── 📄 README.md               # This file
 
----
+```
 
 ## 🚀 Getting Started
 
@@ -106,10 +106,14 @@ To run the project locally:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Vatsal9915/Student-Senate-IITP.git
+   
+   ```
 
 2. **Navigate to the project folder**
    ```bash
    cd Student-Senate-IITP
+   ```
+   
 3. **Open index.html in your browser**
    That’s it! You’re live locally.
 
@@ -143,7 +147,7 @@ Contributions are welcome! If you have ideas for improvements, feel free to fork
 🔗 LinkedIn: https://www.linkedin.com/in/vatsalsrivastava-iitp/
 📍 Student, IIT Patna
 
-📧 Contact
+## 📧 Contact
 For questions, suggestions, or collaborations, feel free to reach out:
 
 📮 Email: vatsal_2312res728@iitp.ac.in 
