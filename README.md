@@ -97,7 +97,7 @@ student-senate-iitp/
 ├── 📄 .gitignore              # Git ignore rules
 └── 📄 README.md               # This file
 
----
+```
 
 ## 🚀 Getting Started
 
