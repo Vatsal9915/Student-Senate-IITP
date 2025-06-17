@@ -5,7 +5,7 @@ This is the official website for the **Student Senate of Indian Institute of Tec
 
 ## 🌐 Live Preview
 
-👉 
+👉 https://student-senate-iitp.vercel.app/
 
 ---
 
