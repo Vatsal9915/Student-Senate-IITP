@@ -89,9 +89,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                     <p className="text-gray-600">
-                      +91-612-302-8000
+                      +91-62022-36461
                       <br />
-                      +91-612-302-8001 (Direct)
+                      +91-73929-96322 (Direct)
                     </p>
                   </div>
                 </div>
