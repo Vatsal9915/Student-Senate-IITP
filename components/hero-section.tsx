@@ -57,13 +57,13 @@ export function HeroSection() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-blue-300/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-3xl bg-blue-300/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
       >
         <ChevronLeft className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-blue-300/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-3xl bg-blue-300/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
       >
         <ChevronRight className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
       </button>
@@ -77,10 +77,10 @@ export function HeroSection() {
         {/* Animated Logo/Badge */}
         <div className="mb-8 flex justify-center">
           <div className="relative">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl flex items-center justify-center shadow-2xl animate-pulse">
               <span className="text-white font-bold text-2xl">SS</span>
             </div>
-            <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full animate-bounce"></div>
+            <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl animate-bounce"></div>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ export function HeroSection() {
           Empowering Students Through Innovation
         </p>
         <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-gray-600 leading-relaxed">
-          A reimagined platform with three specialized wings - DISHA, ARTHNITI, and TATVA - fostering career
+          A reimagined platform with three specialized wings -  <span className="  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 bg-clip-text text-transparent font-semibold text-2xl">DISHA, ARTHNITI, and TATVA </span> -  fostering career
           development, entrepreneurship, and technological innovation at IIT Patna.
         </p>
 
@@ -127,23 +127,23 @@ export function HeroSection() {
           ].map((stat, index) => (
             <div
               key={index}
-              className={`relative rounded-xl bg-white/50 p-4 shadow-lg transform transition-all duration-500 hover:scale-105 ${
+              className={`relative rounded-3xl bg-white/50 p-4 shadow-lg transform transition-all duration-500 hover:scale-105 ${
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               } group`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               {/* Glowing background effect on hover */}
               <div
-              className="pointer-events-none absolute inset-0 border-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
+              className="pointer-events-none z-2 absolute inset-0 border-2 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
               style={{
                 background: "radial-gradient(circle at 50% 50%, rgba(59,130,246,0.25) 0%, rgba(59,130,246,0.10) 60%, transparent 100%)",
                 filter: "blur(30px)",
               }}
               />
-              <div className="relative z-10 bg-white/20  rounded-xl backdrop-blur-sm">
-              <div className="text-2xl mb-2">{stat.icon}</div>
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-600 font-semibold">{stat.label}</div>
+              <div className="relative z-10 bg-white/10 rounded-3xl backdrop-blur-sm">
+              <div className=" z-9 text-2xl mb-2">{stat.icon}</div>
+              <div className="z-9 text-2xl md:text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
+              <div className="z-9 text-sm text-gray-600 font-semibold">{stat.label}</div>
               </div>
             </div>
           ))}
@@ -156,7 +156,7 @@ export function HeroSection() {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+            className={`w-3 h-3 rounded-3xl transition-all duration-200 ${
               index === currentSlide ? "bg-blue-600 scale-125" : "bg-blue-300 hover:bg-blue-400"
             }`}
           />
