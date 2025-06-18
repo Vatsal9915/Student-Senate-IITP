@@ -7,20 +7,15 @@ import Link from "next/link"
 
 const slides = [
   {
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/07.jpg?height=600&width=1200",
     title: "IIT Patna Campus",
     description: "State-of-the-art facilities fostering innovation and excellence",
   },
   {
-    image: "/placeholder.svg?height=600&width=1200",
-    title: "Academic Excellence",
-    description: "World-class education preparing students for global challenges",
-  },
-  {
-    image: "/placeholder.svg?height=600&width=1200",
-    title: "Industry Partnerships",
-    description: "Strong connections with leading companies worldwide",
-  },
+    image: "/07.jpg?height=600&width=1200",
+    title: "IIT Patna Campus",
+    description: "State-of-the-art facilities fostering innovation and excellence",
+  }
 ]
 
 export function HeroSection() {
@@ -44,67 +39,13 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
-      {/* Animated Background Elements - Positioned to avoid text collision */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Floating geometric shapes - positioned in corners and edges only */}
-        <div
-          className="absolute top-20 left-8 w-12 h-12 bg-blue-200/15 rounded-full animate-bounce hidden lg:block"
-          style={{ animationDelay: "0s", animationDuration: "4s" }}
-        ></div>
-        <div
-          className="absolute top-32 right-12 w-8 h-8 bg-blue-300/10 rounded-lg rotate-45 animate-pulse hidden lg:block"
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className="absolute bottom-32 left-12 w-6 h-6 bg-blue-400/15 rounded-full animate-ping hidden lg:block"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute bottom-20 right-16 w-14 h-14 bg-gradient-to-r from-blue-200/10 to-blue-300/10 rounded-full animate-bounce hidden lg:block"
-          style={{ animationDelay: "1.5s", animationDuration: "5s" }}
-        ></div>
-
-        {/* Floating Icons - positioned in far corners */}
-        <div
-          className="absolute top-16 left-20 w-8 h-8 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm animate-bounce hidden xl:flex"
-          style={{ animationDelay: "0s", animationDuration: "3s" }}
-        >
-          <Users className="w-4 h-4 text-blue-500" />
-        </div>
-        <div
-          className="absolute top-24 right-24 w-8 h-8 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm animate-bounce hidden xl:flex"
-          style={{ animationDelay: "1s", animationDuration: "3s" }}
-        >
-          <Award className="w-4 h-4 text-blue-500" />
-        </div>
-        <div
-          className="absolute bottom-40 left-24 w-8 h-8 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm animate-bounce hidden xl:flex"
-          style={{ animationDelay: "2s", animationDuration: "3s" }}
-        >
-          <TrendingUp className="w-4 h-4 text-blue-500" />
-        </div>
-
-        {/* Subtle Grid Pattern - very low opacity */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="grid grid-cols-20 gap-8 h-full">
-            {Array.from({ length: 100 }).map((_, i) => (
-              <div
-                key={i}
-                className="bg-blue-500 rounded-sm animate-pulse w-1 h-1"
-                style={{ animationDelay: `${i * 0.2}s`, animationDuration: "3s" }}
-              ></div>
-            ))}
-          </div>
-        </div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       {/* Background Video/Image Slideshow */}
       <div className="absolute inset-0 z-10">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-all duration-1000 ${
+            className={`absolute inset-0 transition-all duration-500 ${
               index === currentSlide ? "opacity-20" : "opacity-0"
             }`}
           >
@@ -116,13 +57,13 @@ export function HeroSection() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-blue-300/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
       >
         <ChevronLeft className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-blue-300/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-200 group"
       >
         <ChevronRight className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
       </button>
@@ -147,7 +88,7 @@ export function HeroSection() {
           Student Senate
         </h1>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-4 text-blue-600">IIT Patna</h2>
-        <p className="text-2xl md:text-3xl lg:text-4xl mb-8 font-light text-gray-700">
+        <p className="text-2xl md:text-3xl lg:text-4xl mb-8 font-semibold bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent">
           Empowering Students Through Innovation
         </p>
         <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-gray-600 leading-relaxed">
@@ -186,14 +127,24 @@ export function HeroSection() {
           ].map((stat, index) => (
             <div
               key={index}
-              className={`bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg transform transition-all duration-500 hover:scale-105 ${
-                isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
+              className={`relative rounded-xl bg-white/50 p-4 shadow-lg transform transition-all duration-500 hover:scale-105 ${
+              isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              } group`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
+              {/* Glowing background effect on hover */}
+              <div
+              className="pointer-events-none absolute inset-0 border-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
+              style={{
+                background: "radial-gradient(circle at 50% 50%, rgba(59,130,246,0.25) 0%, rgba(59,130,246,0.10) 60%, transparent 100%)",
+                filter: "blur(30px)",
+              }}
+              />
+              <div className="relative z-10 bg-white/20  rounded-xl backdrop-blur-sm">
               <div className="text-2xl mb-2">{stat.icon}</div>
               <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+              <div className="text-sm text-gray-600 font-semibold">{stat.label}</div>
+              </div>
             </div>
           ))}
         </div>
@@ -213,7 +164,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <div className="absolute bottom-4 right-10 transform -translate-x-1/2 z-20 animate-bounce">
         <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
         </div>
