@@ -88,69 +88,82 @@ export function UpcomingEvents() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
-          {upcomingEvents.map((event) => (
-            <Card
-              key={event.id}
-              className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                isEventSoon(event.date) ? "ring-2 ring-orange-200 bg-orange-50/30" : ""
-              }`}
-            >
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <span
-                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getCategoryColor(event.category)}`}
-                  >
-                    {event.category}
-                  </span>
-                  {isEventSoon(event.date) && (
-                    <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
-                      Coming Soon
-                    </span>
-                  )}
-                </div>
+          {upcomingEvents.map((event) => {
+            const categoryColor = getCategoryColor(event.category)
+            // Extract bg and text color for border with reduced opacity
+            const borderColor = categoryColor.includes("blue")
+              ? "border-blue-300/50"
+              : categoryColor.includes("red")
+              ? "border-red-300/50"
+              : categoryColor.includes("green")
+              ? "border-green-300/50"
+              : categoryColor.includes("purple")
+              ? "border-purple-300/50"
+              : "border-gray-300/50"
+            return (
+              <Card
+          key={event.id}
+          className={`group rounded-3xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${borderColor} ${
+            isEventSoon(event.date) ? "ring-2 ring-orange-200 bg-orange-50/30" : ""
+          }`}
+              >
+          <CardContent className="p-6">
+            <div className="flex items-start justify-between mb-4">
+              <span
+                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${categoryColor} border ${borderColor}`}
+              >
+                {event.category}
+              </span>
+              {isEventSoon(event.date) && (
+                <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
+            Coming Soon
+                </span>
+              )}
+            </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {event.title}
-                </h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+              {event.title}
+            </h3>
 
-                <p className="text-gray-600 text-sm mb-4">{event.description}</p>
+            <p className="text-gray-600 text-sm mb-4">{event.description}</p>
 
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Calendar className="w-4 h-4 mr-2 text-blue-500" />
-                    {formatDate(event.date)}
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Clock className="w-4 h-4 mr-2 text-blue-500" />
-                    {event.time}
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2 text-blue-500" />
-                    {event.location}
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Users className="w-4 h-4 mr-2 text-blue-500" />
-                    {event.attendees} expected
-                  </div>
-                </div>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-gray-600">
+                <Calendar className="w-4 h-4 mr-2 text-blue-500" />
+                {formatDate(event.date)}
+              </div>
+              <div className="flex items-center text-sm text-gray-600">
+                <Clock className="w-4 h-4 mr-2 text-blue-500" />
+                {event.time}
+              </div>
+              <div className="flex items-center text-sm text-gray-600">
+                <MapPin className="w-4 h-4 mr-2 text-blue-500" />
+                {event.location}
+              </div>
+              <div className="flex items-center text-sm text-gray-600">
+                <Users className="w-4 h-4 mr-2 text-blue-500" />
+                {event.attendees} expected
+              </div>
+            </div>
 
-                <div className="flex items-center justify-between">
-                  <span
-                    className={`text-sm font-medium ${event.registrationOpen ? "text-green-600" : "text-gray-500"}`}
-                  >
-                    {event.registrationOpen ? "Registration Open" : "Registration Closed"}
-                  </span>
-                  <Link
-                    href={`/events/${event.id}`}
-                    className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+            <div className="flex items-center justify-between">
+              <span
+                className={`text-sm font-medium ${event.registrationOpen ? "text-green-600" : "text-gray-500"}`}
+              >
+                {event.registrationOpen ? "Registration Open" : "Registration Closed"}
+              </span>
+              <Link
+                href={`/events/${event.id}`}
+                className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </CardContent>
+              </Card>
+            )
+          })}
         </div>
 
         <div className="text-center">
