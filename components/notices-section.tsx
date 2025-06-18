@@ -81,39 +81,56 @@ export function NoticesSection() {
           {notices.slice(0, 5).map((notice) => (
             <Card
               key={notice.id}
-              className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                notice.urgent ? "ring-2 ring-red-200 bg-red-50/30" : ""
+              className={`group hover:shadow-xl transition-all rounded-3xl duration-300 transform hover:-translate-y-2 ${
+              notice.urgent ? "bg-red-50/30" : ""
               }`}
+              style={{
+              borderWidth: "2px",
+              borderStyle: "solid",
+              borderColor: notice.urgent
+                ? "#fecaca" 
+                : getCategoryColor(notice.category).includes("red")
+                ? "#fecaca"
+                : getCategoryColor(notice.category).includes("blue")
+                ? "#bfdbfe"
+                : getCategoryColor(notice.category).includes("green")
+                ? "#bbf7d0"
+                : getCategoryColor(notice.category).includes("purple")
+                ? "#ddd6fe"
+                : getCategoryColor(notice.category).includes("orange")
+                ? "#fed7aa"
+                : "#e5e7eb", 
+              }}
             >
               <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <span
-                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getCategoryColor(notice.category)}`}
-                  >
-                    {notice.category}
-                  </span>
-                  {notice.urgent && <Bell className="w-4 h-4 text-red-500 animate-pulse" />}
+              <div className="flex items-start justify-between mb-4">
+                <span
+                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getCategoryColor(notice.category)}`}
+                >
+                {notice.category}
+                </span>
+                {notice.urgent && <Bell className="w-4 h-4 text-red-500 animate-pulse" />}
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                {notice.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm mb-4 line-clamp-3">{notice.excerpt}</p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center text-sm text-gray-500">
+                <Calendar className="w-4 h-4 mr-2" />
+                {formatDate(notice.date)}
                 </div>
-
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                  {notice.title}
-                </h3>
-
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{notice.excerpt}</p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {formatDate(notice.date)}
-                  </div>
-                  <Link
-                    href={`/notices/${notice.id}`}
-                    className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                <Link
+                href={`/notices/${notice.id}`}
+                className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
+                >
+                Read More
+                <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
               </CardContent>
             </Card>
           ))}
@@ -124,7 +141,7 @@ export function NoticesSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg"
+              className="border-2 rounded-2xl border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg"
             >
               View All Notices
               <ArrowRight className="w-5 h-5 ml-2" />
