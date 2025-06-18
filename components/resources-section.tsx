@@ -97,7 +97,7 @@ export function ResourcesSection() {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                className="group rounded-3xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">

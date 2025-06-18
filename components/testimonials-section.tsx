@@ -81,7 +81,7 @@ export function TestimonialsSection() {
           {/* Student Testimonials */}
           <div className="flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Alumni Success Stories</h3>
-            <div className="relative bg-blue-50 rounded-xl p-8 flex-1 flex flex-col">
+            <div className="relative bg-blue-50 rounded-3xl p-8 flex-1 flex flex-col">
               <Quote className="w-8 h-8 text-blue-600 mb-4" />
               <p className="text-gray-700 mb-6 text-lg leading-relaxed flex-1">
                 {testimonials[currentTestimonial].content}
@@ -113,7 +113,7 @@ export function TestimonialsSection() {
           {/* Recruiter Testimonials */}
           <div className="flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Recruiter Feedback</h3>
-            <div className="relative bg-gray-50 rounded-xl p-8 flex-1 flex flex-col">
+            <div className="relative bg-gray-50 rounded-3xl p-8 flex-1 flex flex-col">
               <Quote className="w-8 h-8 text-gray-600 mb-4" />
               <p className="text-gray-700 mb-6 text-lg leading-relaxed flex-1">
                 {recruiterTestimonials[currentRecruiter].content}
