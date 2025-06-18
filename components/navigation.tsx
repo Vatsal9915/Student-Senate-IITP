@@ -74,10 +74,10 @@ export function Navigation() {
   return (
     <nav
       className={`sticky top-0 w-full z-40 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-blue-100" : "bg-white/90 backdrop-blur-sm"
+        isScrolled ? "bg-white/20 backdrop-blur-md shadow-lg border-b border-blue-100" : "bg-white/90 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <Link href="/" className="flex items-center space-x-3 group">
@@ -96,79 +96,78 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <div key={item.href} className="relative flex items-center">
-                {item.dropdown ? (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setActiveDropdown(item.href)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button
-                      className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-                        pathname.startsWith(item.href)
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
-                      }`}
+              {item.dropdown ? (
+                <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown(item.href)}
+                onMouseLeave={() => setActiveDropdown(null)}
+                >
+                <button
+                  className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  pathname.startsWith(item.href)
+                    ? "text-blue-600 bg-blue-50"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
+                  }`}
+                >
+                  {item.label}
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                {activeDropdown === item.href && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  {item.dropdown.map((dropdownItem) => (
+                    <Link
+                    key={dropdownItem.href}
+                    href={dropdownItem.href}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
-                      {item.label}
-                      <ChevronDown className="w-4 h-4 ml-1" />
-                    </button>
-                    {activeDropdown === item.href && (
-                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.href}
-                            href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                          >
-                            {dropdownItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    {dropdownItem.label}
+                    </Link>
+                  ))}
                   </div>
-                ) : item.label === "Notices" ? (
-                  <button
-                    onClick={handleNoticesClick}
-                    className={`relative px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-                      isNoticesActive()
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className={`relative px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-                      pathname === item.href
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
-                    }`}
-                  >
-                    {item.label}
-                    {pathname === item.href && (
-                      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>
-                    )}
-                  </Link>
                 )}
+                </div>
+              ) : item.label === "Notices" ? (
+                <button
+                onClick={handleNoticesClick}
+                className={`relative px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  isNoticesActive()
+                  ? "text-blue-600 bg-blue-50"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
+                }`}
+                >
+                {item.label}
+                </button>
+              ) : (
+                <Link
+                href={item.href}
+                className={`relative px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  pathname === item.href
+                  ? "text-blue-600 bg-blue-50"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
+                }`}
+                >
+                {item.label}
+                {pathname === item.href && (
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>
+                )}
+                </Link>
+              )}
               </div>
             ))}
-
-            <div className="ml-6 flex items-center">
-              <Button
-                size="sm"
-                onClick={handleDownloadBrochure}
-                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 px-4 py-2 h-10"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Brochure
-              </Button>
             </div>
-          </div>
+            <div className="hidden lg:flex ml-6 items-center">
+            <Button
+              size="sm"
+              onClick={handleDownloadBrochure}
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 px-4 py-2 h-10"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Download Brochure
+            </Button>
+            </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
