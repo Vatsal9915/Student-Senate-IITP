@@ -33,7 +33,7 @@ export function StatsSection() {
   }, [])
 
   return (
-    <section id="stats-section" className="py-20 bg-gradient-to-br from-blue-25 via-white to-blue-25">
+    <section id="stats-section" className="py-20 bg-gradient-to-br from-blue-50 via-white to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Student Senate at a Glance</h2>
@@ -46,15 +46,27 @@ export function StatsSection() {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl shadow-lg p-8 text-center transform transition-all duration-700 hover:scale-102 hover:shadow-xl ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              className={`relative  bg-gradient-to-br from-blue-50 via-white to-blue-50 backdrop-blur-lg rounded-3xl shadow-lg p-8 text-center transform transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl overflow-hidden ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
+              {/* Grain effect overlay */}
+              <div
+              className="pointer-events-none absolute inset-0 z-0"
+              style={{
+                backgroundImage:
+                "url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 fill=%22none%22><filter id=%22grain%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 seed=%221%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23grain)%22/></svg>')",
+                opacity: 0.15,
+                mixBlendMode: "overlay",
+              }}
+              />
+              <div className="relative z-10">
               <div className="text-4xl mb-4">{achievement.icon}</div>
               <div className="text-3xl font-bold text-blue-500 mb-2">{achievement.value}</div>
               <div className="text-gray-900 font-medium mb-2">{achievement.label}</div>
               <div className="text-sm text-gray-600">{achievement.description}</div>
+              </div>
             </div>
           ))}
         </div>
