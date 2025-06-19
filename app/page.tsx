@@ -7,12 +7,14 @@ import { ResourcesSection } from "@/components/resources-section"
 import { ContactForm } from "@/components/contact-form"
 import { CTASection } from "@/components/cta-section"
 import StatsSection from "@/components/stats-section"
+import WingsSection from "@/components/WingsSection"
 
 export default function HomePage() {
   return (
     <div>
       <HeroSection />
       <StatsSection/>
+      <WingsSection/>
       <EventsHighlights />
       <NoticesSection />
       <UpcomingEvents />
