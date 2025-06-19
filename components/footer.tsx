@@ -13,7 +13,7 @@ export function Footer() {
                 <span className="text-white font-bold text-xl">SS</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Student Senate</h3>
+                <h3 className="text-xl font-bold">Student Technical Council</h3>
                 <p className="text-blue-400">IIT Patna</p>
               </div>
             </div>

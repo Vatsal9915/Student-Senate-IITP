@@ -6,9 +6,9 @@ import Link from "next/link"
 const notices = [
   {
     id: 1,
-    title: "Student Senate Elections 2025 - Nomination Process",
+    title: "Student Technical Council Elections 2025 - Nomination Process",
     date: "2025-03-10",
-    excerpt: "Nominations for Student Senate positions are now open. Submit your applications by March 15th.",
+    excerpt: "Nominations for Student Technical Council positions are now open. Submit your applications by March 15th.",
     category: "Elections",
     urgent: true,
   },

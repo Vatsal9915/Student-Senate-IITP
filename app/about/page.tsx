@@ -8,7 +8,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">About Student Senate</h1>
+            <h1 className="text-5xl font-bold mb-6">About Student Technical Council</h1>
             <p className="text-xl max-w-3xl mx-auto opacity-90">
               A reimagined and upgraded platform that caters to diverse academic and professional aspirations of
               students through three specialized wings.
@@ -22,17 +22,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Description */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Student Senate?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Student Technical Council?</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-6">
-                Student Senate is a reimagined and upgraded version of the former Technology Club, established with the
+                Student Technical Council is a reimagined and upgraded version of the former Technology Club, established with the
                 vision of creating a centralized, well-structured platform that caters to the diverse academic and
                 professional aspirations of students. Recognizing the need for more specialized focus areas, the Student
                 Senate was formed to streamline operations and maximize impact by dividing its responsibilities into
                 three dedicated verticals.
               </p>
               <p className="mb-6">
-                The Student Senate functions as the central decision-making and coordination body, ensuring synergy
+                The Student Technical Council functions as the central decision-making and coordination body, ensuring synergy
                 between these wings. It promotes cross-domain collaboration, efficient resource utilization, and a
                 unified approach towards student empowerment.
               </p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   </blockquote>
                   <div className="text-right">
                     <p className="font-semibold text-gray-900">Mr. Gautam Kashyap</p>
-                    <p className="text-blue-600">President, Student Senate</p>
+                    <p className="text-blue-600">President, Student Technical Council</p>
                     <p className="text-gray-600">IIT Patna</p>
                   </div>
                 </div>

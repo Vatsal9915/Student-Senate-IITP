@@ -14,10 +14,10 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Student Senate - IIT Patna",
-  description: "Empowering Students Through Innovation - Official website of Student Senate, IIT Patna",
-  keywords: "IIT Patna, Student Senate, DISHA, ARTHNITI, TATVA, student government, technology, innovation",
-  authors: [{ name: "Student Senate IIT Patna" }],
+  title: "Student Technical Council - IIT Patna",
+  description: "Empowering Students Through Innovation - Official website of Student Technical Council, IIT Patna",
+  keywords: "IIT Patna, Student Technical Council, DISHA, ARTHNITI, TATVA, student government, technology, innovation",
+  authors: [{ name: "Student Technical Council IIT Patna" }],
   viewport: "width=device-width, initial-scale=1",
     generator: 'Vatsal Srivastava'
 }

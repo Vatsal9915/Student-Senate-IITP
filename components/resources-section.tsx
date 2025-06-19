@@ -6,7 +6,7 @@ import { Download, FileText, Users, Calendar, BookOpen, Shield } from "lucide-re
 
 const resources = [
   {
-    title: "Student Senate Constitution",
+    title: "Student Technical Council Constitution",
     description: "Official constitution and governance framework",
     icon: BookOpen,
     fileSize: "2.3 MB",
@@ -34,7 +34,7 @@ const resources = [
   },
   {
     title: "Membership Guidelines",
-    description: "How to join and participate in Student Senate",
+    description: "How to join and participate in Student Technical Council",
     icon: Users,
     fileSize: "1.2 MB",
     lastUpdated: "January 2025",

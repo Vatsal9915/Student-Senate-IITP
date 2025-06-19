@@ -82,7 +82,7 @@ export default function ArthnitiPage() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">About ARTHNITI</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                ARTHNITI is the Student Senate's wing dedicated to promoting entrepreneurship and business skills among
+                ARTHNITI is the Student Technical Council's wing dedicated to promoting entrepreneurship and business skills among
                 students. It provides platforms for idea development, mentorship, workshops, and networking to help
                 students transform their innovative ideas into successful ventures.
               </p>

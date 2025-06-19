@@ -7,7 +7,7 @@ const participationLevels = [
   {
     level: "1. Open Entry Points",
     title: "First Touchpoints",
-    description: "Where any student can enter the ecosystem and get their first taste of Student Senate activities.",
+    description: "Where any student can enter the ecosystem and get their first taste of Student Technical Council activities.",
     icon: UserPlus,
     color: "from-blue-400 to-blue-500",
     activities: [
@@ -112,7 +112,7 @@ export default function ParticipationPage() {
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">Student Participation Model</h1>
             <p className="text-xl max-w-3xl mx-auto opacity-90">
-              A structured pathway for student engagement, growth, and leadership development within the Student Senate
+              A structured pathway for student engagement, growth, and leadership development within the Student Technical Council
               ecosystem
             </p>
           </div>
@@ -253,7 +253,7 @@ export default function ParticipationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join the Student Senate and be part of a community that values growth, collaboration, and impact
+            Join the Student Technical Council and be part of a community that values growth, collaboration, and impact
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/wings">

@@ -89,7 +89,7 @@ export function Navigation() {
             </div>
             <div className="hidden sm:flex flex-col justify-center">
               <h1 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors leading-tight">
-                Student Senate
+                Student Technical Council
               </h1>
               <p className="text-sm text-blue-500 font-medium leading-tight">IIT Patna</p>
             </div>

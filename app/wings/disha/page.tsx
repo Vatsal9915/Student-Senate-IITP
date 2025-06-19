@@ -86,7 +86,7 @@ export default function DishaPage() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">About DISHA</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                DISHA is the dedicated wing of the Student Senate that focuses on empowering students with the skills,
+                DISHA is the dedicated wing of the Student Technical Council that focuses on empowering students with the skills,
                 exposure, and support needed to excel in their professional journey. It serves as a bridge between
                 students and the industry, offering curated opportunities in the form of internships, training programs,
                 certification workshops, and placement assistance.

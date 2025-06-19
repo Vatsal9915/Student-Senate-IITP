@@ -792,7 +792,7 @@ export default function TeamPage() {
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">Our Team</h1>
             <p className="text-xl max-w-3xl mx-auto opacity-90">
-              Meet the dedicated individuals who lead the Student Senate and drive innovation across our three wings and
+              Meet the dedicated individuals who lead the Student Technical Council and drive innovation across our three wings and
               specialized teams.
             </p>
           </div>
@@ -895,7 +895,7 @@ export default function TeamPage() {
                 <span className="text-2xl">👑</span>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Core Leadership</h3>
-              <p className="text-gray-600 text-sm">Strategic oversight and governance of the entire Student Senate</p>
+              <p className="text-gray-600 text-sm">Strategic oversight and governance of the entire Student Technical Council</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md text-center">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -920,7 +920,7 @@ export default function TeamPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Want to Connect with Our Team?</h2>
           <p className="text-xl text-gray-600 mb-8">
-            We're here to help with any questions about participation, collaboration, or Student Senate activities.
+            We're here to help with any questions about participation, collaboration, or Student Technical Council activities.
           </p>
           <Link
             href="/contact"

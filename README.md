@@ -1,6 +1,6 @@
-# 🏛️ Student Senate Website - IIT Patna
+# 🏛️ Student Technical Council Website - IIT Patna
 
-This is the official website for the **Student Senate of Indian Institute of Technology Patna (IITP) - Hybrid Programs** (just a prototype designed by Vatsal srivastava), designed to serve as a central hub for student representation, notices, policies, events, and more.
+This is the official website for the **Student Technical Council of Indian Institute of Technology Patna (IITP) - Hybrid Programs** (just a prototype designed by Vatsal srivastava), designed to serve as a central hub for student representation, notices, policies, events, and more.
 
 
 ## 🌐 Live Preview
@@ -12,7 +12,7 @@ This is the official website for the **Student Senate of Indian Institute of Tec
 ## 📌 Features
 
 - 🧭 **Navigation Bar** – Clean and sticky top menu for easy access to all pages.
-- 👥 **Members Page** – Detailed info about Student Senate members with designations and contact info.
+- 👥 **Members Page** – Detailed info about Student Technical Council members with designations and contact info.
 - 📢 **Notices & Events** – A section to view latest updates and upcoming activities.
 - 📄 **Resources** – Downloadable Constitution, Policy Documents, Meeting Minutes, etc.
 - 📬 **Contact Section** – Contact form and official email for inquiries and communication.
@@ -35,7 +35,7 @@ This is the official website for the **Student Senate of Indian Institute of Tec
 ```bash
 student-senate-iitp/
 ├── 📁 app/                     # Next.js App Router
-│   ├── 📁 about/              # About Student Senate
+│   ├── 📁 about/              # About Student Technical Council
 │   │   └── page.tsx
 │   ├── 📁 contact/            # Contact page with form
 │   │   └── page.tsx

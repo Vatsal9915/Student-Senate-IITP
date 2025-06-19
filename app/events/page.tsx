@@ -323,7 +323,7 @@ export default function EventsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/participation">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-                Join Student Senate
+                Join Student Technical Council
               </Button>
             </Link>
             <Link href="/contact">

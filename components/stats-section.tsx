@@ -36,7 +36,7 @@ export function StatsSection() {
     <section id="stats-section" className="py-20 bg-gradient-to-br from-blue-50 via-white to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Student Senate at a Glance</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Student Technical Council at a Glance</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our newly established structure designed to maximize student impact and engagement across diverse domains.
           </p>

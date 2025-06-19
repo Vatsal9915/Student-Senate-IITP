@@ -93,7 +93,7 @@ export default function TatvaPage() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">About TATVA</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                TATVA is the dedicated wing of the Student Senate that aims to nurture technical expertise and promote a
+                TATVA is the dedicated wing of the Student Technical Council that aims to nurture technical expertise and promote a
                 research-oriented mindset among students. It serves as a vibrant platform for students to explore
                 emerging technologies, engage in innovative projects, and develop problem-solving skills.
               </p>

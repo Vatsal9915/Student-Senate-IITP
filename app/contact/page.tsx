@@ -48,7 +48,7 @@ export default function ContactPage() {
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl max-w-3xl mx-auto opacity-90">
-              Get in touch with our Student Senate. We're here to assist with participation, partnerships, and any
+              Get in touch with our Student Technical Council. We're here to assist with participation, partnerships, and any
               inquiries.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-600">
-                      Student Senate
+                      Student Technical Council
                       <br />
                       Indian Institute of Technology Patna
                       <br />
@@ -373,7 +373,7 @@ export default function ContactPage() {
           <div className="space-y-6">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">How can I join the Student Senate?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">How can I join the Student Technical Council?</h3>
                 <p className="text-gray-600">
                   Students can join through our participation model starting with event participation, open calls, and
                   volunteer opportunities. Visit our Participation page to learn about the growth pathway.
@@ -396,7 +396,7 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  How can companies collaborate with Student Senate?
+                  How can companies collaborate with Student Technical Council?
                 </h3>
                 <p className="text-gray-600">
                   Companies can partner with us for recruitment, workshops, mentorship programs, and sponsorships.

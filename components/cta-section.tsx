@@ -19,7 +19,7 @@ export function CTASection() {
     <section className="py-20 bg-gradient-to-r from-blue-500 to-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white mb-12">
-          <h2 className="text-4xl font-bold mb-4">Ready to Join the Student Senate?</h2>
+          <h2 className="text-4xl font-bold mb-4">Ready to Join the Student Technical Council?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Be part of our innovative platform that empowers students through specialized wings and comprehensive
             development programs.

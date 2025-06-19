@@ -14,7 +14,7 @@ export function NotificationBanner() {
         <div className="flex items-center space-x-2">
           <Bell className="w-4 h-4" />
           <span className="text-sm font-medium">
-            🗳️ Student Senate Elections 2025 - Nominations open until March 15th |
+            🗳️ Student Technical Council Elections 2025 - Nominations open until March 15th |
             <a href="/elections" className="underline ml-1 hover:text-orange-200">
               Learn More
             </a>

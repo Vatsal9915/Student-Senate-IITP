@@ -85,7 +85,7 @@ export function HeroSection() {
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-gray-800 via-blue-600 to-gray-800 bg-clip-text text-transparent">
-          Student Senate
+          Student  Technical Council 
         </h1>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-4 text-blue-600">IIT Patna</h2>
         <p className="text-2xl md:text-3xl lg:text-4xl mb-8 font-semibold bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent">
