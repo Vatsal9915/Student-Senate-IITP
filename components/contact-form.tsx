@@ -56,7 +56,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="max-w-2xl mx-auto">
+    <Card className="max-w-2xl rounded-3xl mx-auto">
       <CardContent className="p-6 lg:p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Send us a Message</h3>
         <form onSubmit={handleSubmit} className="space-y-6">

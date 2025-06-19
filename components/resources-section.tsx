@@ -137,12 +137,12 @@ export function ResourcesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="bg-blue-50 rounded-lg p-6 max-w-2xl mx-auto">
+          <div className="bg-blue-50 rounded-3xl p-6 max-w-2xl mx-auto">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Need Additional Resources?</h3>
             <p className="text-gray-600 mb-4">
               Can't find what you're looking for? Contact our team for additional documents or information.
             </p>
-            <Button variant="outline" className="border-blue-500 text-blue-600 hover:bg-blue-50">
+            <Button variant="outline" className="border-blue-500 rounded-2xl text-blue-600 hover:bg-blue-50">
               Contact Support
             </Button>
           </div>
