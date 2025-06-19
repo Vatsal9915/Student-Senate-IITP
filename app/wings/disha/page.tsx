@@ -64,17 +64,17 @@ export default function DishaPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-100 via-blue-500 to-blue-100 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Users className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-5xl font-bold mb-6">DISHA</h1>
-            <h2 className="text-2xl font-semibold mb-4 opacity-90">Career Growth & Training Cell</h2>
-            <p className="text-xl max-w-3xl mx-auto opacity-90">
-              Empowering students with the skills, exposure, and support needed to excel in their professional journey
-            </p>
+        <div className="w-20 h-20 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+          <Users className="w-10 h-10 text-white" />
+        </div>
+        <h1 className="text-5xl font-bold  mb-6">DISHA</h1>
+        <h2 className="text-2xl font-semibold mb-4 opacity-90">Career Growth & Training Cell</h2>
+        <p className="text-xl max-w-3xl mx-auto opacity-90">
+          Empowering students with the skills, exposure, and support needed to excel in their professional journey
+        </p>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function DishaPage() {
                 placements, DISHA stands as a pillar of career support, development, and direction.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Focus Areas</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
@@ -146,7 +146,7 @@ export default function DishaPage() {
               return (
                 <Card
                   key={index}
-                  className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  className="group rounded-3xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
