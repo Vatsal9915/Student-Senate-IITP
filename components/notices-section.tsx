@@ -6,14 +6,6 @@ import Link from "next/link"
 const notices = [
   {
     id: 1,
-    title: "Student Technical Council Elections 2025 - Nomination Process",
-    date: "2025-03-10",
-    excerpt: "Nominations for Student Technical Council positions are now open. Submit your applications by March 15th.",
-    category: "Elections",
-    urgent: true,
-  },
-  {
-    id: 2,
     title: "HACK N TECH Hackathon Results Announced",
     date: "2025-03-08",
     excerpt: "Congratulations to all participants! Winners have been announced for the 24-hour coding marathon.",
@@ -21,7 +13,7 @@ const notices = [
     urgent: false,
   },
   {
-    id: 3,
+    id: 2,
     title: "New Internship Opportunities - Spring 2025",
     date: "2025-03-05",
     excerpt: "15+ companies are offering internship positions. Registration deadline: March 20th.",
@@ -29,7 +21,7 @@ const notices = [
     urgent: false,
   },
   {
-    id: 4,
+    id: 3,
     title: "TATVA Workshop Series - AI & Machine Learning",
     date: "2025-03-03",
     excerpt: "Join our comprehensive workshop series on AI/ML fundamentals and advanced applications.",
@@ -37,7 +29,7 @@ const notices = [
     urgent: false,
   },
   {
-    id: 5,
+    id: 4,
     title: "DISHA Career Counseling Sessions",
     date: "2025-03-01",
     excerpt: "One-on-one career guidance sessions with industry experts. Book your slot now.",

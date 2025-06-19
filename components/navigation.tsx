@@ -192,7 +192,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         <div
           className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-            isOpen ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0"
+            isOpen ? "max-h-screen opacity-100 pb-4 overflow-y-auto" : "max-h-0 opacity-0"
           }`}
         >
           <div className="pt-4 space-y-2">

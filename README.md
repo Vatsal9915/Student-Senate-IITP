@@ -69,7 +69,6 @@ student-senate-iitp/
 │   ├── 📄 hero-section.tsx    # Homepage hero
 │   ├── 📄 navigation.tsx      # Main navigation
 │   ├── 📄 notices-section.tsx # Notices & updates
-│   ├── 📄 notification-banner.tsx # Top notification
 │   ├── 📄 resources-section.tsx # Resource downloads
 │   ├── 📄 stats-section.tsx   # Statistics display
 │   ├── 📄 testimonials-section.tsx # Alumni testimonials

@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
-import { NotificationBanner } from "@/components/notification-banner"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
@@ -30,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
-        <NotificationBanner />
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
