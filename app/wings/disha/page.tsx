@@ -101,7 +101,7 @@ export default function DishaPage() {
                 placements, DISHA stands as a pillar of career support, development, and direction.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Focus Areas</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">

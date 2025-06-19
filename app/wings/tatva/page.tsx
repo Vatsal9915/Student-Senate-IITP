@@ -74,7 +74,7 @@ export default function TatvaPage() {
       <section className="bg-gradient-to-r from-purple-200 via-purple-600 to-purple-200 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
               <Code className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-6">TATVA</h1>
@@ -108,7 +108,7 @@ export default function TatvaPage() {
                 and more.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-300 rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology Domains</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
@@ -151,11 +151,11 @@ export default function TatvaPage() {
               return (
                 <Card
                   key={index}
-                  className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  className="group rounded-3xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                      <div className="w-12 h-12 bg-purple-100 rounded-3xl flex items-center justify-center mr-4">
                         <IconComponent className="w-6 h-6 text-purple-600" />
                       </div>
                       <div>

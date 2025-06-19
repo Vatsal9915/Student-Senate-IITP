@@ -63,7 +63,7 @@ export default function ArthnitiPage() {
       <section className="bg-gradient-to-r from-green-100 via-green-700 to-green-200 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
               <Lightbulb className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-6">ARTHNITI</h1>
@@ -97,7 +97,7 @@ export default function ArthnitiPage() {
                 self-sustenance.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl border-2 border-green-200 p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">What We Offer</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
@@ -142,7 +142,7 @@ export default function ArthnitiPage() {
               return (
                 <Card
                   key={index}
-                  className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  className="group rounded-3xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
