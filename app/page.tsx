@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/hero-section"
-import { StatsSection } from "@/components/stats-section"
 import { EventsHighlights } from "@/components/events-highlights"
 import { NoticesSection } from "@/components/notices-section"
 import { UpcomingEvents } from "@/components/upcoming-events"
@@ -7,12 +6,13 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { ResourcesSection } from "@/components/resources-section"
 import { ContactForm } from "@/components/contact-form"
 import { CTASection } from "@/components/cta-section"
+import StatsSection from "@/components/stats-section"
 
 export default function HomePage() {
   return (
     <div>
       <HeroSection />
-      <StatsSection />
+      <StatsSection/>
       <EventsHighlights />
       <NoticesSection />
       <UpcomingEvents />
