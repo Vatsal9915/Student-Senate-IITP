@@ -26,7 +26,7 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Senate" },
+    { href: "/about", label: "About Council" },
     {
       href: "/wings",
       label: "Wings",
