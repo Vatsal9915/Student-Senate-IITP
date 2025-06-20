@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const WingsSection = () => {
   return (
-    <div className=' bg-blue-50 p-8 lg:p-16 pt-20 rounded-lg shadow-lg flex flex-col items-center justify-center'>
+    <div className=' bg-blue-50 p-8 lg:p-16 pt-20 rounded-lg  flex flex-col items-center justify-center'>
         <div>
             <h2 className="text-xl font-bold text-[#453CD5] mb-4 text-center">OUR WINGS</h2>
             <p className="text-5xl  text-gray-800 font-semibold mb-8 leading-normal text-center">EXPLORE THE VARIOUS WINGS OF OUR ORGANIZATION <br/> THAT DRIVE OUR MISSION FORWARD.</p>
