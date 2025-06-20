@@ -103,9 +103,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-600">
-                      studentsenate@iitp.ac.in
-                      <br />
-                      tpc@iitp.ac.in
+                      techclubiitp@iitp.ac.in
                     </p>
                   </div>
                 </div>
@@ -134,7 +132,7 @@ export default function ContactPage() {
                     <h4 className="font-semibold text-gray-900 mb-2">For Students</h4>
                     <p className="text-sm text-gray-600 mb-2">Join wings and participation inquiries</p>
                     <a href="mailto:students@iitp.ac.in" className="text-blue-600 text-sm hover:underline">
-                      students@iitp.ac.in
+                      techclubiitp@iitp.ac.in
                     </a>
                   </CardContent>
                 </Card>
@@ -143,7 +141,7 @@ export default function ContactPage() {
                     <h4 className="font-semibold text-gray-900 mb-2">For Industry</h4>
                     <p className="text-sm text-gray-600 mb-2">Partnership and collaboration opportunities</p>
                     <a href="mailto:industry@iitp.ac.in" className="text-green-600 text-sm hover:underline">
-                      industry@iitp.ac.in
+                      techclubiitp@iitp.ac.in
                     </a>
                   </CardContent>
                 </Card>
@@ -400,7 +398,7 @@ export default function ContactPage() {
                 </h3>
                 <p className="text-gray-600">
                   Companies can partner with us for recruitment, workshops, mentorship programs, and sponsorships.
-                  Contact our industry relations team at industry@iitp.ac.in for collaboration opportunities.
+                  Contact our industry relations team at techclubiitp@iitp.ac.in for collaboration opportunities.
                 </p>
               </CardContent>
             </Card>

@@ -75,7 +75,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">tpc@iitp.ac.in</span>
+                <span className="text-gray-300 text-sm">techclubiitp@iitp.ac.in</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Training and Placement Cell, IIT Patna. All rights reserved.
+            © {new Date().getFullYear()} Technolog Club, IIT Patna CEP UG. All rights reserved.
           </p>
         </div>
       </div>
