@@ -26,7 +26,6 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    
     {
       href: "/wings",
       label: "Wings",
@@ -40,6 +39,11 @@ export function Navigation() {
     { href: "/events", label: "Events" },
     { href: "/contact", label: "Contact Us" },
   ]
+
+  // Add click support for dropdowns
+  const handleDropdownToggle = (href: string) => {
+    setActiveDropdown((prev) => (prev === href ? null : href))
+  }
 
   const handleDownloadBrochure = () => {
     const link = document.createElement("a")
