@@ -98,24 +98,17 @@ export function HeroSection() {
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-        <Link href="/about">
-        <Button
-          size="lg"
-          className="bg-gradient-to-r from-[#453CD5] to-blue-600 hover:from-blue-600 hover:to-[#453CD5] text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+        <button
+          className="bg-[#453CD5] py-4 rounded-lg text-white px-10 flex items-center gap-2"
+          onClick={() => {
+            window.scrollBy({ top: window.innerHeight, left: 0, behavior: "smooth" })
+          }}
         >
           Learn More
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Button>
-        </Link>
-        <Link href="/contact">
-        <Button
-          size="lg"
-          variant="outline"
-          className="border-2 border-[#453CD5] text-[#453CD5] hover:bg-[#453CD5]/10 px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-        >
-          Contact Us
-        </Button>
-        </Link>
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
       </div>
 
       {/* Quick Info Cards */}
