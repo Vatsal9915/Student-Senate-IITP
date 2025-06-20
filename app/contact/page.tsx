@@ -105,6 +105,9 @@ export default function ContactPage() {
                     <p className="text-gray-600">
                       techclubiitp@iitp.ac.in
                     </p>
+                    <p className="text-gray-600">
+                      stc.iit_patna@iitp.ac.in
+                    </p>
                   </div>
                 </div>
 

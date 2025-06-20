@@ -71,6 +71,11 @@ export default function DishaPage() {
           <Users className="w-10 h-10 text-white" />
         </div>
         <h1 className="text-5xl font-bold  mb-6">DISHA</h1>
+            <p className="text-lg font-semibold mb-2 opacity-90 flex items-center justify-center gap-2">
+              <span className="inline-block bg-white bg-opacity-20 rounded px-3 py-1 text-green-100 tracking-wide">
+              disha@iitp.ac.in
+              </span>
+            </p>
         <h2 className="text-2xl font-semibold mb-4 opacity-90">Career Growth & Training Cell</h2>
         <p className="text-xl max-w-3xl mx-auto opacity-90">
           Empowering students with the skills, exposure, and support needed to excel in their professional journey

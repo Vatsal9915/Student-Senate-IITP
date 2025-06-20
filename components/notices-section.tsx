@@ -125,19 +125,7 @@ export function NoticesSection() {
             </Card>
           ))}
         </div>
-
-        <div className="text-center">
-          <Link href="/notices">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 rounded-lg border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg"
-            >
-              View All Notices
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </Link>
-        </div>
+        
       </div>
     </section>
   )
