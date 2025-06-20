@@ -113,13 +113,19 @@ export function NoticesSection() {
                 <Calendar className="w-4 h-4 mr-2" />
                 {formatDate(notice.date)}
                 </div>
-                <Link
-                href={`/notices/${notice.id}`}
-                className="text-[#453CD5] hover:text-blue-700 text-sm font-medium flex items-center group"
-                >
-                Read More
-                <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
+                {notice.category === "Events" && notice.title.includes("Hackathon") ? (
+                  <Link href="/events" passHref>
+                    <h1 className="flex justify-center items-center text-[#453CD5] font-semibold text-lg group-hover:text-[#453CD5] transition-colors cursor-pointer">
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                    </h1>
+                  </Link>
+                ) : (
+                  <h1 className="flex justify-center items-center text-[#453CD5] font-semibold text-lg group-hover:text-[#453CD5] transition-colors cursor-pointer">
+                    Coming Soon
+                    <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                  </h1>
+                )}
               </div>
               </CardContent>
             </Card>
