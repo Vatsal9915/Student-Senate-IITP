@@ -160,10 +160,10 @@ export function Navigation() {
         <Button
           size="sm"
           onClick={handleDownloadBrochure}
-          className=" bg-[#453CD5]   hover:bg-[#453CD5] text-white shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 px-4 py-2 h-10"
+          className="bg-[#453CD5] hover:bg-[#453CD5] text-white shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 px-4 py-2 h-10 flex items-center gap-2"
         >
-          <Download className="w-4 h-4 text-[#453CD5]" />
-          Download Brochure
+          <Download className="w-4 h-4 text-white" />
+          <span className="whitespace-nowrap">Download Brochure</span>
         </Button>
         </div>
 
