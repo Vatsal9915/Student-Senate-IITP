@@ -8,9 +8,9 @@ const WingsSection = () => {
             <h2 className="text-xl font-bold text-[#453CD5] mb-4 text-center">OUR WINGS</h2>
             <p className="text-5xl  text-gray-800 font-semibold mb-8 leading-normal text-center">EXPLORE THE VARIOUS WINGS OF OUR ORGANIZATION <br/> THAT DRIVE OUR MISSION FORWARD.</p>
         </div>
-        <div className="flex flex-col gap-10 mt-20 lg:flex-row lg:gap-16 items-center w-full">
+        <div className="flex flex-col gap-8 justify-center mt-20 lg:flex-row  items-center w-full">
             {/* DISHA */}
-            <div className="relative w-full max-w-[28rem] h-[30rem] mx-auto group border-b-4 border-[#453CD5] overflow-hidden">
+            <div className="relative w-full max-w-[28rem] h-[30rem] group border-b-4 border-[#453CD5] overflow-hidden">
               {/* front */}
               <div className="bg-white shadow-lg p-10 flex flex-col items-start justify-between transition-all duration-500 z-10 w-full h-full group-hover:bg-gray-200">
                 <h1 className="text-lg tracking-widest font-semibold text-[#453CD5] mb-4">COUNCIL</h1>
@@ -32,7 +32,7 @@ const WingsSection = () => {
               </div>
             </div>
             {/* ARTHNITI */}
-            <div className="relative w-full max-w-[28rem] h-[30rem] mx-auto group border-b-4 border-[#453CD5] overflow-hidden">
+            <div className="relative w-full max-w-[28rem] h-[30rem]  group border-b-4 border-[#453CD5] overflow-hidden">
               {/* front */}
               <div className="bg-white shadow-lg p-10 flex flex-col items-start justify-between transition-all duration-500 z-10 w-full h-full group-hover:bg-gray-200">
                 <h1 className="text-lg tracking-widest font-semibold text-[#453CD5] mb-4">COUNCIL</h1>
@@ -54,7 +54,7 @@ const WingsSection = () => {
               </div>
             </div>
             {/* TATVA */}
-            <div className="relative w-full max-w-[28rem] h-[30rem] mx-auto group border-b-4 border-[#453CD5] overflow-hidden">
+            <div className="relative w-full max-w-[28rem] h-[30rem]  group border-b-4 border-[#453CD5] overflow-hidden">
               {/* front */}
               <div className="bg-white shadow-lg p-10 flex flex-col items-start justify-between transition-all duration-500 z-10 w-full h-full group-hover:bg-gray-200">
                 <h1 className="text-lg tracking-widest font-semibold text-[#453CD5] mb-4">COUNCIL</h1>
