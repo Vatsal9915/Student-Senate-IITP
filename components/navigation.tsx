@@ -26,7 +26,7 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Council" },
+    
     {
       href: "/wings",
       label: "Wings",
@@ -38,8 +38,6 @@ export function Navigation() {
     },
     { href: "/team", label: "Our Team" },
     { href: "/events", label: "Events" },
-    { href: "/#notices", label: "Notices" },
-    { href: "/participation", label: "Participation" },
     { href: "/contact", label: "Contact Us" },
   ]
 
