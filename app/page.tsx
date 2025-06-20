@@ -8,13 +8,14 @@ import { ContactForm } from "@/components/contact-form"
 import { CTASection } from "@/components/cta-section"
 import StatsSection from "@/components/stats-section"
 import WingsSection from "@/components/WingsSection"
-
+import CoreValues from "@/components/coreValues"
 export default function HomePage() {
   return (
     <div>
       <HeroSection />
       <StatsSection/>
       <WingsSection/>
+      <CoreValues/>
       <EventsHighlights />
       <NoticesSection />
       <UpcomingEvents />
