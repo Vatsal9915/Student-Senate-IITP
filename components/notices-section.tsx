@@ -60,20 +60,18 @@ export function NoticesSection() {
   }
 
   return (
-    <section id="notices-section" className="py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Latest Notices & Updates</h2>
-          <p className="text-lg lg:text-xl text-gray-600">
-            Stay informed about important announcements and opportunities
-          </p>
+    <section id="notices-section" className="py-16 w-[100vw] lg:py-20 bg-gray-50">
+      <div className="max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-left mb-12 lg:mb-16">
+          <h1 className="text-[#453CD5] mb-10 tracking-widest font-semibold ">NEWS AND UPDATES</h1>
+          <h2 className="text-6xl font-semibold text-gray-900 mb-4">LATEST NEWS <br/> AND UPDATES</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {notices.slice(0, 5).map((notice) => (
             <Card
               key={notice.id}
-              className={`group hover:shadow-xl transition-all rounded-3xl duration-300 transform hover:-translate-y-2 ${
+              className={`group hover:shadow-xl transition-all rounded-sm  duration-300 transform hover:-translate-y-2 ${
               notice.urgent ? "bg-red-50/30" : ""
               }`}
               style={{
@@ -104,7 +102,7 @@ export function NoticesSection() {
                 {notice.urgent && <Bell className="w-4 h-4 text-red-500 animate-pulse" />}
               </div>
 
-              <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+              <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#453CD5] transition-colors line-clamp-2">
                 {notice.title}
               </h3>
 
@@ -117,7 +115,7 @@ export function NoticesSection() {
                 </div>
                 <Link
                 href={`/notices/${notice.id}`}
-                className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
+                className="text-[#453CD5] hover:text-blue-700 text-sm font-medium flex items-center group"
                 >
                 Read More
                 <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
@@ -133,7 +131,7 @@ export function NoticesSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 rounded-2xl border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg"
+              className="border-2 rounded-lg border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg"
             >
               View All Notices
               <ArrowRight className="w-5 h-5 ml-2" />
