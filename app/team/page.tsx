@@ -808,6 +808,18 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+      <div>
+        <div className="flex flex-col items-center justify-center py-16 relative">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-2 flex items-center gap-2">
+        More Positions Coming Soon
+        <span className="relative flex h-4 w-4">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500"></span>
+        </span>
+          </h2>
+          <p className="text-gray-500 text-base">Stay tuned for updates!</p>
+        </div>
+      </div>
       {/* Contact CTA */}
       <section className="py-16 bg-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
