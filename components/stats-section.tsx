@@ -5,7 +5,7 @@ const StatsSection = () => {
     <div className="flex p-16 items-center h-[90vh] justify-between  gap-8 bg-gray-50 rounded-2xl shadow-md">
       {/* left section */}
       <div className="flex-1">
-        <h3 className="text-blue-600 font-bold mb-2">About STC</h3>
+        <h3 className="text-violet-600 font-bold mb-2">About STC</h3>
         <h1 className="text-7xl font-semibold mb-4 text-gray-800 leading-tight">
           SHAPING MINDS,<br /> INSPIRING FUTURES
         </h1>
@@ -15,15 +15,15 @@ const StatsSection = () => {
 
         <div className='flex justify-start items-center gap-8 mt-8'>
           <div>
-            <p className='text-3xl text-blue-700 font-bold'>5000+</p>
+            <p className='text-3xl text-violet-700 font-bold'>5000+</p>
             <h2>STUDENTS </h2>
           </div>
           <div>
-            <p className='text-3xl text-blue-700 font-bold'>400+</p>
+            <p className='text-3xl text-violet-700 font-bold'>400+</p>
             <h2>LECTURE</h2>
           </div>
           <div>
-            <p className='text-3xl text-blue-700 font-bold'>5</p>
+            <p className='text-3xl text-violet-700 font-bold'>5</p>
             <h2>PROGRAMS</h2>
           </div>
         </div>
