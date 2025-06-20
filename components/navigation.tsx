@@ -43,8 +43,8 @@ export function Navigation() {
 
   const handleDownloadBrochure = () => {
     const link = document.createElement("a")
-    link.href = "/student-senate-brochure.pdf"
-    link.download = "Student-Senate-Brochure-IIT-Patna.pdf"
+    link.href = "./STC.pdf"
+    link.download = "STC.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
